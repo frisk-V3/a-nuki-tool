@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL「あ」消去エディター</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>URL「あ」消去エディター</h1>
+        <p>入力されたURLから日本語の「あ」を完全に一括消去します。複数行の同時処理にも対応。</p>
+    </header>
+
+    <main class="main-content">
+        <!-- 入力エリア -->
+        <div class="card">
+            <div class="card-header">
+                <h2>元のURL</h2>
+                <span id="inputCount" class="badge">0 文字</span>
+            </div>
+            <textarea id="inputUrl" placeholder="ここにURLを貼り付けてください（複数行可）"></textarea>
+            <div class="action-bar">
+                <button id="clearBtn" class="btn btn-secondary">クリア</button>
+            </div>
+        </div>
+
+        <!-- 出力エリア -->
+        <div class="card">
+            <div class="card-header">
+                <h2>変換結果</h2>
+                <span id="outputCount" class="badge">0 文字</span>
+            </div>
+            <textarea id="outputUrl" readonly placeholder="変換されたURLがここに表示されます"></textarea>
+            <div class="action-bar">
+                <button id="copyBtn" class="btn btn-primary" disabled>結果をコピー</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast">コピーしました！</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
